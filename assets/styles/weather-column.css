@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import './variables.css';
 
 .weather-column-container {
   min-width: 84px;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: rgba(25, 118, 210, 0.2)
+  background-color: rgba(25, 118, 210, 0.2);
 }
 
 .precipitation-bar {
@@ -59,7 +59,7 @@
   .precipitation-bar-container {
     width: 50px;
   }
-  
+
   .precipitation-bar {
     width: 50px;
   }

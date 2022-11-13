@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import './variables.css';
 
 .city-selection-container {
   border-bottom: calc(100vh - 48px) solid var(--colourPrimary);
@@ -109,7 +109,7 @@
     margin-top: calc(100vh - 48px);
     z-index: 0;
   }
-  
+
   .city-selection-skeleton {
     width: 100%;
     height: 1050px;
@@ -129,7 +129,7 @@
     height: 80vh;
     z-index: 0;
   }
-  
+
   .title {
     top: 50%;
     width: 100%;

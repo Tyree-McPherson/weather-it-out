@@ -7,9 +7,9 @@
 
 <script>
 export default {
-  name: "ErrorPage",
+  name: 'ErrorPage',
   head() {
-    const title = "404 Not Found"
+    const title = '404 Not Found'
     return {
       title,
     }

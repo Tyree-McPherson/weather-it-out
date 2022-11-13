@@ -39,52 +39,52 @@
 </template>
 
 <script>
-  import setTheme from '~/functions/set-theme';
-  import darkThemeEnabled from '~/functions/dark-theme-enabled';
-  import "~/assets/styles/layout.css";
-  import getDisplayNames from "~/functions/get-display-names";
-  import cityData from "~/json/city.json";
+import setTheme from '~/functions/set-theme'
+import darkThemeEnabled from '~/functions/dark-theme-enabled'
+import '~/assets/styles/layout.css'
+import getDisplayNames from '~/functions/get-display-names'
+import cityData from '~/json/city.json'
 
-  export default {
-    name: "DefaultLayout",
-    data() {
-      return {
-        cities: getDisplayNames()
-      };
-    },
-    mounted() {
-      // On mount, check if Dark Theme is enabled. If so, set the theme to dark.
-      const isDarkThemeEnabled = darkThemeEnabled();
-
-      if (isDarkThemeEnabled) {
-        document.getElementById("theme-switch").setAttribute("aria-checked", "true");
-        document.getElementsByTagName("html")[0].setAttribute("theme", "dark");
-        this.$vuetify.theme.dark = true;
-      }
-    },
-    methods: {
-      theme(theme) {
-        setTheme(theme);
-      },
-      selectCity(city) {
-
-        const cityDataLength = cityData.length;
-        let route = "";
-
-        // Use the city from the parameter to look for the corresponding city name
-        // in the JSON (from the "name" key-value pair).
-        for (let i = 0; i < cityDataLength; i++) {
-
-          const currentCity = cityData[i];
-          if (currentCity.displayName === city) {
-            route = currentCity.name;
-            break
-          }
-        }
-
-        // Redirect to the city weather page to get the current weather.
-        this.$router.push(`/city/${route}`);
-      }
+export default {
+  name: 'DefaultLayout',
+  data() {
+    return {
+      cities: getDisplayNames(),
     }
-  }
+  },
+  mounted() {
+    // On mount, check if Dark Theme is enabled. If so, set the theme to dark.
+    const isDarkThemeEnabled = darkThemeEnabled()
+
+    if (isDarkThemeEnabled) {
+      document
+        .getElementById('theme-switch')
+        .setAttribute('aria-checked', 'true')
+      document.getElementsByTagName('html')[0].setAttribute('theme', 'dark')
+      this.$vuetify.theme.dark = true
+    }
+  },
+  methods: {
+    theme(theme) {
+      setTheme(theme)
+    },
+    selectCity(city) {
+      const cityDataLength = cityData.length
+      let route = ''
+
+      // Use the city from the parameter to look for the corresponding city name
+      // in the JSON (from the "name" key-value pair).
+      for (let i = 0; i < cityDataLength; i++) {
+        const currentCity = cityData[i]
+        if (currentCity.displayName === city) {
+          route = currentCity.name
+          break
+        }
+      }
+
+      // Redirect to the city weather page to get the current weather.
+      this.$router.push(`/city/${route}`)
+    },
+  },
+}
 </script>

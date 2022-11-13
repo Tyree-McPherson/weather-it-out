@@ -16,15 +16,15 @@
       </div>
     </div>
     <div class="city-selection-container">
-        <div class="city-selection-skeleton">
-          <div  class="city-selection-items">
-            <CityButton
-              v-for="item in data"
-              :key="item.name"
-              :city-name="item.name"
-              :city-name-display="item.displayName"
-              :image-source="item.imageSource"
-            />
+      <div class="city-selection-skeleton">
+        <div class="city-selection-items">
+          <CityButton
+            v-for="item in data"
+            :key="item.name"
+            :city-name="item.name"
+            :city-name-display="item.displayName"
+            :image-source="item.imageSource"
+          />
         </div>
       </div>
     </div>
@@ -32,20 +32,20 @@
 </template>
 
 <script>
-  import "~/assets/styles/index.css"
-  import CityButton from "~/components/CityButton.vue";
-  import cityData from "~/json/city.json"
+import '~/assets/styles/index.css'
+import CityButton from '~/components/CityButton.vue'
+import cityData from '~/json/city.json'
 
-  export default {
-    name: "IndexPage",
-    components: { CityButton },
-    data() {
-      return {
-        data: cityData
-      }
-    },
-    metaInfo: {
-      title: "Home"
+export default {
+  name: 'IndexPage',
+  components: { CityButton },
+  data() {
+    return {
+      data: cityData,
     }
-  }
+  },
+  metaInfo: {
+    title: 'Home',
+  },
+}
 </script>

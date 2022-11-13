@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import globalSettings from "./.env.js"
+import globalSettings from './.env.js'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -65,7 +65,7 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: "#3E6E21",
+          primary: '#3E6E21',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -74,7 +74,7 @@ export default {
           success: colors.green.accent3,
         },
         dark: {
-          primary: "#72A252",
+          primary: '#72A252',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -92,6 +92,6 @@ export default {
   // Environment variables.
   publicRuntimeConfig: {
     frontendDomain: globalSettings.frontendDomain,
-    serverlessDomain: globalSettings.serverlessDomain
-  }
+    serverlessDomain: globalSettings.serverlessDomain,
+  },
 }

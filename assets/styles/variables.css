@@ -2,22 +2,23 @@ html {
   overflow-y: auto;
 }
 
-html, html[theme="light"] {
-  --colourPrimary: #3E6E21;
+html,
+html[theme='light'] {
+  --colourPrimary: #3e6e21;
   --colourBlack: #000000;
-  --colourWhite: #FFFFFF;
-  --colourBackground: #FFFFFF;
+  --colourWhite: #ffffff;
+  --colourBackground: #ffffff;
   --colourSecondary: #757575;
   --colourBlackToWhite: #000000;
-  --colourBlue: #1976D2;
+  --colourBlue: #1976d2;
 }
 
-html[theme="dark"] {
-  --colourPrimary: #3E6E21;
+html[theme='dark'] {
+  --colourPrimary: #3e6e21;
   --colourBlack: #000000;
-  --colourWhite: #FFFFFF;
+  --colourWhite: #ffffff;
   --colourBackground: #121212;
-  --colourSecondary: #A9A9A9;
-  --colourBlackToWhite: #FFFFFF;
-  --colourBlue: #1976D2;
+  --colourSecondary: #a9a9a9;
+  --colourBlackToWhite: #ffffff;
+  --colourBlue: #1976d2;
 }
