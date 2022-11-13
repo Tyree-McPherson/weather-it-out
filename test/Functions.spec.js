@@ -18,7 +18,7 @@ describe('Test Functions', () => {
 
   test('Convert date to time', () => {
     const date = convertDateToTime(
-      new Date('Thu Nov 10 2022 16:48:30 GMT-0500 (Eastern Standard Time)')
+      new Date('Thu Nov 10 2022 16:48:30')
     )
     const time = '4:48 PM'
 
