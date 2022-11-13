@@ -1,0 +1,26 @@
+html {
+  overflow-y: auto
+}
+
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cities-dropdown {
+  width: 150px;
+  z-index: 40;
+}
+
+.main-container {
+  max-height: calc(100vh - 48px);
+}

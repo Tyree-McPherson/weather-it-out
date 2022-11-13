@@ -1,0 +1,70 @@
+@import "./variables.css";
+
+.weather-column-container {
+  min-width: 84px;
+  width: 100%;
+  height: 266px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-column-container h3 {
+  font-size: 28px;
+  word-break: break-all;
+}
+
+.weather-column-container p {
+  margin: 0;
+}
+
+.weather-column-bottom {
+  display: flex;
+}
+
+.weather-icon {
+  font-size: 80px;
+}
+
+.precipitation-bar-container {
+  height: 100px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: rgba(25, 118, 210, 0.2)
+}
+
+.precipitation-bar {
+  width: 70px;
+  background-color: var(--colourBlue);
+}
+
+/* At 560px, go into mobile mode. */
+@media (max-width: 35em) {
+  .weather-column-container {
+    min-width: 60px;
+  }
+
+  .weather-column-container h3 {
+    font-size: 16px;
+  }
+
+  .weather-icon {
+    font-size: 50px !important;
+  }
+
+  .precipitation-bar-container {
+    width: 50px;
+  }
+  
+  .precipitation-bar {
+    width: 50px;
+  }
+
+  .weather-column-bottom {
+    flex-direction: column;
+  }
+}

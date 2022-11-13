@@ -2,51 +2,81 @@
   {
     "name": "toronto",
     "lat": "43.657751",
-    "lon": "-79.385823"
+    "lon": "-79.385823",
+    "displayName": "Toronto, ON",
+    "imageSource": "/images/toronto.jpg",
+    "ip": "72.136.102.205"
   },
   {
     "name": "vancouver",
     "lat": "49.253969",
-    "lon": "-123.107100"
+    "lon": "-123.107100",
+    "displayName": "Vancouver, BC",
+    "imageSource": "/images/vancouver.jpg",
+    "ip": "209.121.228.23"
   },
   {
     "name": "montreal",
     "lat": "45.514287",
-    "lon": "-73.611912"
+    "lon": "-73.611912",
+    "displayName": "Montreal, QC",
+    "imageSource": "/images/montreal.jpg",
+    "ip": "72.136.102.205"
   },
   {
     "name": "niagara-falls",
     "lat": "43.100043",
-    "lon": "-79.077324"
+    "lon": "-79.077324",
+    "displayName": "Niagara Falls, ON",
+    "imageSource": "/images/niagara-falls.jpg",
+    "ip": "72.136.102.205"
   },
   {
     "name": "victoria",
     "lat": "48.426979",
-    "lon": "-123.355475"
+    "lon": "-123.355475",
+    "displayName": "Victoria, BC",
+    "imageSource": "/images/victoria.jpg",
+    "ip": "209.121.228.23"
   },
   {
     "name": "halifax",
     "lat": "44.644048",
-    "lon": "-63.587570"
+    "lon": "-63.587570",
+    "displayName": "Halifax, NS",
+    "imageSource": "/images/halifax.jpg",
+    "ip": "134.41.24.23"
   },
   {
     "name": "quebec-city",
     "lat": "46.809694",
-    "lon": "-71.253640"
+    "lon": "-71.253640",
+    "displayName": "Quebec City, QC",
+    "imageSource": "/images/quebec-city.jpg",
+    "ip": "72.136.102.205"
   },
   {
     "name": "calgary",
     "lat": "51.032111",
-    "lon": "-114.081364"
+    "lon": "-114.081364",
+    "displayName": "Calgary, AB",
+    "imageSource": "/images/calgary.jpg",
+    "ip": "50.99.22.223"
   },
   {
     "name": "ottawa",
     "lat": "45.405441",
-    "lon": "-75.686860"
+    "lon": "-75.686860",
+    "displayName": "Ottawa, ON",
+    "imageSource": "/images/ottawa.jpg",
+    "ip": "72.136.102.205"
   },
   {
     "name": "edmonton",
     "lat": "53.540001",
-    "lon": "-113.499957"
+    "lon": "-113.499957",
+    "displayName": "Edmonton, AB",
+    "imageSource": "/images/edmonton.jpg",
+    "ip": "50.99.22.223"
   }
 ]

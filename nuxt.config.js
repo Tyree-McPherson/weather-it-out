@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import globalSettings from "./.env.js"
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -6,8 +7,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - root',
-    title: 'root',
+    titleTemplate: '%s - Weather It Out',
+    title: 'Home',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -59,12 +60,21 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/styles/variables.css'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
+        light: {
+          primary: "#3E6E21",
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+        },
         dark: {
-          primary: colors.blue.darken2,
+          primary: "#72A252",
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -78,4 +88,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Environment variables.
+  publicRuntimeConfig: {
+    frontendDomain: globalSettings.frontendDomain,
+    serverlessDomain: globalSettings.serverlessDomain
+  }
 }

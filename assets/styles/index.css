@@ -1,0 +1,146 @@
+@import "./variables.css";
+
+.city-selection-container {
+  border-bottom: calc(100vh - 48px) solid var(--colourPrimary);
+  border-left: 10vw solid transparent;
+  border-right: 0px solid transparent;
+  height: 0;
+  width: 60vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.city-selection-skeleton {
+  width: 50vw;
+  height: calc(100vh - 48px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.city-selection-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+}
+
+.title-container {
+  position: absolute;
+  width: 40vw;
+  height: calc(100vh - 48px);
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--colourWhite);
+}
+
+.title {
+  top: 40%;
+  z-index: 20;
+  width: 500px;
+}
+
+.title h1 {
+  font-size: 128px;
+  line-height: 1.2;
+}
+
+.image-overlay {
+  background-color: var(--colourBlack);
+  opacity: 0.5;
+  width: 100%;
+  height: calc(100vh - 48px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* At 1520px (width) or 600px (height), put the buttons in one column. */
+@media (max-width: 95em), (max-height: 37.5em) {
+  .city-selection-skeleton {
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  .city-selection-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduce the font-size of the title text. */
+@media (max-width: 86.25em), (max-height: 25.625em) {
+  .title h1 {
+    font-size: 64px;
+    margin-left: 8px;
+  }
+
+  .title p {
+    margin-left: 8px;
+  }
+}
+
+/* Change the layout. */
+@media (max-width: 53.125em) {
+  .image-overlay {
+    z-index: 0;
+  }
+
+  .background-image {
+    width: 100%;
+    min-height: calc(100vh - 48px);
+    position: fixed;
+    top: 48px;
+    left: 0;
+  }
+
+  .city-selection-container {
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin-top: calc(100vh - 48px);
+    z-index: 0;
+  }
+  
+  .city-selection-skeleton {
+    width: 100%;
+    height: 1050px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--colourPrimary);
+  }
+
+  .city-selection-items {
+    margin: 8px 0;
+    position: relative;
+  }
+
+  .title-container {
+    width: 100%;
+    justify-content: center;
+    height: 80vh;
+    z-index: 0;
+  }
+  
+  .title {
+    top: 50%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title h1 {
+    margin: 0;
+  }
+
+  .title p {
+    margin: 0;
+  }
+}

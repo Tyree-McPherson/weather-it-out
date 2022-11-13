@@ -1,44 +1,18 @@
-<!-- TODO: NOT DONE. -->
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/"> Home page </NuxtLink>
-  </v-app>
+  <div class="d-flex justify-center align-center flex-column">
+    <h1>404 Page Not Found</h1>
+    <NuxtLink to="/">Home page</NuxtLink>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'EmptyLayout',
-  layout: 'empty',
-  props: {
-    error: {
-      type: Object,
-      default: null,
-    },
-  },
-  data() {
-    return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred',
-    }
-  },
+  name: "ErrorPage",
   head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
+    const title = "404 Not Found"
     return {
       title,
     }
   },
 }
 </script>
-
-<style scoped>
-h1 {
-  font-size: 20px;
-}
-</style>

@@ -1,58 +1,90 @@
 <template>
   <v-app>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+    <v-app-bar fixed app dense>
+      <div class="header">
+        <NuxtLink to="/" class="header-logo">
+          <WeatherItOutLogo />
+        </NuxtLink>
+        <v-spacer></v-spacer>
+        <div class="cities-dropdown">
+          <v-select
+            label="Cities"
+            :items="cities"
+            dense
+            hide-details="auto"
+            hide-selected
+            single-line
+            solo
+            background-color="transparent"
+            width="100%"
+            @change="(city) => selectCity(city)"
+          >
+          </v-select>
+        </div>
+        <v-spacer></v-spacer>
+        <v-switch
+          id="theme-switch"
+          v-model="$vuetify.theme.dark"
+          flat
+          hide-details
+          @click="theme($vuetify.theme.dark)"
+        >
+        </v-switch>
+      </div>
     </v-app-bar>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+    <v-main class="main-container">
+      <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
-export default {
-  name: 'DefaultLayout',
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/city/_city',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
+  import setTheme from '~/functions/set-theme';
+  import darkThemeEnabled from '~/functions/dark-theme-enabled';
+  import "~/assets/styles/layout.css";
+  import getDisplayNames from "~/functions/get-display-names";
+  import cityData from "~/json/city.json";
+
+  export default {
+    name: "DefaultLayout",
+    data() {
+      return {
+        cities: getDisplayNames()
+      };
+    },
+    mounted() {
+      // On mount, check if Dark Theme is enabled. If so, set the theme to dark.
+      const isDarkThemeEnabled = darkThemeEnabled();
+
+      if (isDarkThemeEnabled) {
+        document.getElementById("theme-switch").setAttribute("aria-checked", "true");
+        document.getElementsByTagName("html")[0].setAttribute("theme", "dark");
+        this.$vuetify.theme.dark = true;
+      }
+    },
+    methods: {
+      theme(theme) {
+        setTheme(theme);
+      },
+      selectCity(city) {
+
+        const cityDataLength = cityData.length;
+        let route = "";
+
+        // Use the city from the parameter to look for the corresponding city name
+        // in the JSON (from the "name" key-value pair).
+        for (let i = 0; i < cityDataLength; i++) {
+
+          const currentCity = cityData[i];
+          if (currentCity.displayName === city) {
+            route = currentCity.name;
+            break
+          }
+        }
+
+        // Redirect to the city weather page to get the current weather.
+        this.$router.push(`/city/${route}`);
+      }
     }
-  },
-}
+  }
 </script>

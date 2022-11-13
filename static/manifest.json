@@ -1,0 +1,17 @@
+{
+  "name": "Weather It Out",
+  "short_name": "Weather It Out",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#3E6E21",
+  "background_color": "#FFFFFF",
+  "description": "Get your city's weather forecast.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/images/weather-it-out-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

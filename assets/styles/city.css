@@ -1,0 +1,57 @@
+@import "./variables.css";
+
+.city-container {
+  background-color: var(--colourBackground);
+}
+
+.city-container h2 {
+  font-size: 36px;
+}
+
+.title-and-tabs-section {
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+}
+
+.title-and-tabs-section h1 {
+  font-size: 4rem;
+}
+
+.title-and-tabs-section p {
+  color: var(--colourSecondary);
+}
+
+.title-icons-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: auto;
+}
+
+.title-icons-container > div {
+  margin: 8px 16px;
+}
+
+.block-container {
+  padding: 0 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-container > div:not(:last-child) {
+  border-right: 1px solid var(--colourSecondary);
+}
+
+/* At 560px, go into mobile mode. */
+@media (max-width: 35em) {
+  .title-and-tabs-section h1 {
+    font-size: 2rem;
+  }
+
+  .city-container h2 {
+    font-size: 30px;
+  }
+}

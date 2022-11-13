@@ -1,0 +1,28 @@
+@import "./variables.css";
+
+.city-button-container {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.city-button-container div {
+  border-radius: 10px;
+}
+
+.city-button-container h2 {
+  position: absolute;
+  color: var(--colourWhite);
+}
+
+.image-small-overlay {
+  width: 300px;
+  height: 60px;
+  background-color: var(--colourBlack);
+  opacity: 0.5;
+  position: absolute;
+}

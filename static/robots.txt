@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+
+Sitemap: https://wonderful-glacier-082b4cb0f.2.azurestaticapps.net/sitemap.xml

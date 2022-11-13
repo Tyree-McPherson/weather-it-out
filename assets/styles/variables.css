@@ -1,0 +1,23 @@
+html {
+  overflow-y: auto;
+}
+
+html, html[theme="light"] {
+  --colourPrimary: #3E6E21;
+  --colourBlack: #000000;
+  --colourWhite: #FFFFFF;
+  --colourBackground: #FFFFFF;
+  --colourSecondary: #757575;
+  --colourBlackToWhite: #000000;
+  --colourBlue: #1976D2;
+}
+
+html[theme="dark"] {
+  --colourPrimary: #3E6E21;
+  --colourBlack: #000000;
+  --colourWhite: #FFFFFF;
+  --colourBackground: #121212;
+  --colourSecondary: #A9A9A9;
+  --colourBlackToWhite: #FFFFFF;
+  --colourBlue: #1976D2;
+}
