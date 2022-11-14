@@ -1,5 +1,4 @@
 import colors from 'vuetify/es5/util/colors'
-import globalSettings from './.env.js'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -91,7 +90,7 @@ export default {
 
   // Environment variables.
   publicRuntimeConfig: {
-    frontendDomain: globalSettings.frontendDomain,
-    serverlessDomain: globalSettings.serverlessDomain,
+    frontendDomain: process.env.frontendDomain,
+    serverlessDomain: process.env.serverlessDomain,
   },
 }
