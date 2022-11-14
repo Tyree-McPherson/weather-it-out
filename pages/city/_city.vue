@@ -33,6 +33,7 @@
         >
           <h2>Temperature</h2>
           <div class="block-container">
+            <Suspense :data-length="temperatureData.length" />
             <WeatherColumn
               v-for="item in temperatureData"
               :key="item.time"
@@ -51,6 +52,7 @@
         >
           <h2>Precipitation</h2>
           <div class="block-container">
+            <Suspense :data-length="precipitationData.length" />
             <PrecipitationColumn
               v-for="item in precipitationData"
               :key="item.time"
@@ -68,6 +70,7 @@
         >
           <h2>Wind</h2>
           <div class="block-container">
+            <Suspense :data-length="windData.length" />
             <WindColumn
               v-for="item in windData"
               :key="item.time"
@@ -98,10 +101,11 @@ import getTemperatureForecast from '~/functions/get-temperature-forecast'
 import getPrecipitationForecast from '~/functions/get-precipitation-forecast'
 import getWindForecast from '~/functions/get-wind-forecast'
 import WindColumn from '~/components/WindColumn.vue'
+import Suspense from '~/components/Suspense.vue'
 
 export default {
   name: 'CityPage',
-  components: { WeatherColumn, PrecipitationColumn, WindColumn },
+  components: { WeatherColumn, PrecipitationColumn, WindColumn, Suspense },
   data: () => ({
     weather: {},
     title: '',
