@@ -119,12 +119,12 @@ export default {
     // Get the necessary data.
     const weather = await getCityWeatherData(
       this.$route.params.city,
-      process.env.serverlessDomain
+      this.$config.serverlessDomain
     )
     this.weather = weather
     this.timeZone = await getTimeZone(
       this.$route.params.city,
-      process.env.serverlessDomain
+      this.$config.serverlessDomain
     )
     this.sunrise = getSunriseSunset(
       weather.city.sunrise,

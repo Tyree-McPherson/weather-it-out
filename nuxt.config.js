@@ -90,7 +90,7 @@ export default {
 
   // Environment variables.
   publicRuntimeConfig: {
-    frontendDomain: process.env.frontendDomain,
-    serverlessDomain: process.env.serverlessDomain,
+    frontendDomain: "https://wonderful-glacier-082b4cb0f.2.azurestaticapps.net",
+    serverlessDomain: "https://weatheritout.azurewebsites.net",
   },
 }

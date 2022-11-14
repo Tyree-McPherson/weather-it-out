@@ -35,7 +35,7 @@ export default {
         .getElementById('background-image')
         .children[1].setAttribute(
           'style',
-          `background-image: url("${process.env.frontendDomain}${this.imageSource}"); background-position: center center;`
+          `background-image: url("${this.$config.frontendDomain}${this.imageSource}"); background-position: center center;`
         )
     },
     cityPage(city) {
