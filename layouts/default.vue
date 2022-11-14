@@ -41,7 +41,7 @@
 <script>
 import setTheme from '~/functions/set-theme'
 import darkThemeEnabled from '~/functions/dark-theme-enabled'
-import '~/assets/styles/layout.css'
+import '~/assets/styles/layout.scss'
 import getDisplayNames from '~/functions/get-display-names'
 import cityData from '~/json/city.json'
 

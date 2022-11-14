@@ -88,7 +88,7 @@
 import getCityWeatherData from '~/functions/get-city-weather-data'
 import capitalizeFirstLetter from '~/functions/capitalize-first-letter'
 import getOneDisplayName from '~/functions/get-one-display-name'
-import '~/assets/styles/city.css'
+import '~/assets/styles/city.scss'
 import currentDateAndTime from '~/functions/current-date-and-time'
 import getTimeZone from '~/functions/get-time-zone'
 import getSunriseSunset from '~/functions/get-sunrise-sunset'

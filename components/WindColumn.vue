@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import '~/assets/styles/weather-column.css'
+import '~/assets/styles/weather-column.scss'
 export default {
   props: {
     time: {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import '~/assets/styles/city-button.css'
+import '~/assets/styles/city-button.scss'
 
 export default {
   props: {

@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import '~/assets/styles/index.css'
+import '~/assets/styles/index.scss'
 import CityButton from '~/components/CityButton.vue'
 import cityData from '~/json/city.json'
 
