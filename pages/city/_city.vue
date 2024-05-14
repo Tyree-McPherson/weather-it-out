@@ -126,10 +126,7 @@ export default {
       this.$config.serverlessDomain
     )
     this.weather = weather
-    this.timeZone = await getTimeZone(
-      this.$route.params.city,
-      this.$config.serverlessDomain
-    )
+    this.timeZone = getTimeZone(this.$route.params.city)
     this.sunrise = getSunriseSunset(
       weather.city.sunrise,
       this.weather.city.timezone

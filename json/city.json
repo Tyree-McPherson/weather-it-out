@@ -5,7 +5,7 @@
     "lon": "-79.385823",
     "displayName": "Toronto, ON",
     "imageSource": "/images/toronto.jpg",
-    "ip": "72.136.102.205"
+    "timezone": "ET"
   },
   {
     "name": "vancouver",
@@ -13,7 +13,7 @@
     "lon": "-123.107100",
     "displayName": "Vancouver, BC",
     "imageSource": "/images/vancouver.jpg",
-    "ip": "209.121.228.23"
+    "timezone": "PT"
   },
   {
     "name": "montreal",
@@ -21,7 +21,7 @@
     "lon": "-73.611912",
     "displayName": "Montreal, QC",
     "imageSource": "/images/montreal.jpg",
-    "ip": "72.136.102.205"
+    "timezone": "ET"
   },
   {
     "name": "niagara-falls",
@@ -29,7 +29,7 @@
     "lon": "-79.077324",
     "displayName": "Niagara Falls, ON",
     "imageSource": "/images/niagara-falls.jpg",
-    "ip": "72.136.102.205"
+    "timezone": "ET"
   },
   {
     "name": "victoria",
@@ -37,7 +37,7 @@
     "lon": "-123.355475",
     "displayName": "Victoria, BC",
     "imageSource": "/images/victoria.jpg",
-    "ip": "209.121.228.23"
+    "timezone": "PT"
   },
   {
     "name": "halifax",
@@ -45,7 +45,7 @@
     "lon": "-63.587570",
     "displayName": "Halifax, NS",
     "imageSource": "/images/halifax.jpg",
-    "ip": "134.41.24.23"
+    "timezone": "AT"
   },
   {
     "name": "quebec-city",
@@ -53,7 +53,7 @@
     "lon": "-71.253640",
     "displayName": "Quebec City, QC",
     "imageSource": "/images/quebec-city.jpg",
-    "ip": "72.136.102.205"
+    "timezone": "ET"
   },
   {
     "name": "calgary",
@@ -61,7 +61,7 @@
     "lon": "-114.081364",
     "displayName": "Calgary, AB",
     "imageSource": "/images/calgary.jpg",
-    "ip": "50.99.22.223"
+    "timezone": "MT"
   },
   {
     "name": "ottawa",
@@ -69,7 +69,7 @@
     "lon": "-75.686860",
     "displayName": "Ottawa, ON",
     "imageSource": "/images/ottawa.jpg",
-    "ip": "72.136.102.205"
+    "timezone": "ET"
   },
   {
     "name": "edmonton",
@@ -77,6 +77,6 @@
     "lon": "-113.499957",
     "displayName": "Edmonton, AB",
     "imageSource": "/images/edmonton.jpg",
-    "ip": "50.99.22.223"
+    "timezone": "MT"
   }
 ]
